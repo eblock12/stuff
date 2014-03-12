@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BulletModelFile" xml:space="preserve">
+    <value>bullet.x3m</value>
+  </data>
+  <data name="ClientTag" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="DataLoadError" xml:space="preserve">
+    <value>Failed to load data from '{0}'</value>
+  </data>
+  <data name="DataPath" xml:space="preserve">
+    <value>data</value>
+  </data>
+  <data name="DisplayListCompiling" xml:space="preserve">
+    <value>Compiling display list #{0}...</value>
+  </data>
+  <data name="EngineTag" xml:space="preserve">
+    <value>Engine</value>
+  </data>
+  <data name="EnterMainLoop" xml:space="preserve">
+    <value>Entering the main loop...</value>
+  </data>
+  <data name="EventTag" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="ExitMainLoop" xml:space="preserve">
+    <value>Exiting the main loop...</value>
+  </data>
+  <data name="InitializationError" xml:space="preserve">
+    <value>An error occured while trying to start the game. Technical details:</value>
+  </data>
+  <data name="LogInformationFormat" xml:space="preserve">
+    <value>[{0}] {1}</value>
+    <comment>Combines log source and text</comment>
+  </data>
+  <data name="ModelLoading" xml:space="preserve">
+    <value>Loading model from file '{0}'...</value>
+  </data>
+  <data name="ModelTag" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="RendererInitializationFailure" xml:space="preserve">
+    <value>Failed to initailize the video renderer.</value>
+  </data>
+  <data name="RendererTag" xml:space="preserve">
+    <value>Render</value>
+  </data>
+  <data name="TankBarrelModelFile" xml:space="preserve">
+    <value>tank_barrel.x3m</value>
+  </data>
+  <data name="TankBaseModelFile" xml:space="preserve">
+    <value>tank_base.x3m</value>
+  </data>
+  <data name="TaskAddAlreadyExists" xml:space="preserve">
+    <value>Failed to add engine task because it already exists.</value>
+  </data>
+  <data name="TaskRemoveDoesNotExist" xml:space="preserve">
+    <value>Failed to remove engine task because it does not exist.</value>
+  </data>
+  <data name="TextureLoading" xml:space="preserve">
+    <value>Loading texture from image file '{0}'...</value>
+  </data>
+  <data name="TextureTag" xml:space="preserve">
+    <value>Texture</value>
+  </data>
+  <data name="UnhandledExceptionMessage1" xml:space="preserve">
+    <value>OH MY GOD! Tanks encountered an unexpected error during execution.</value>
+    <comment>Line 1 of unhandled exception text</comment>
+  </data>
+  <data name="UnhandledExceptionMessage2" xml:space="preserve">
+    <value>Here are the boring technical details:</value>
+    <comment>Line 2 of unhandled exception text</comment>
+  </data>
+  <data name="UserQuitRequest" xml:space="preserve">
+    <value>User requested a program quit</value>
+  </data>
+  <data name="VideoInitializing" xml:space="preserve">
+    <value>Initializing video...</value>
+  </data>
+  <data name="VideoShutdown" xml:space="preserve">
+    <value>Shutting down video...</value>
+  </data>
+  <data name="WindowCaption" xml:space="preserve">
+    <value>Tank!</value>
+  </data>
+</root>
