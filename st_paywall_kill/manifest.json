@@ -1,0 +1,14 @@
+{
+  "name": "Seattle Times Paywall Killer",
+  "version": "1.0",
+  "manifest_version": 2,
+  
+  "description": "Defeats Seattle Times Paywall",
+  
+  "content_scripts": [
+    {
+      "matches": ["http://*.seattletimes.com/*"],
+      "js": ["st_paywall_kill.js"]
+    }
+  ]
+}
