@@ -1,0 +1,48 @@
+material reticle
+{
+	technique
+	{
+		pass
+		{
+            shading smooth
+			ambient 0.2466 0.8 1.0
+			diffuse 0.2466 0.8 1.0
+		}
+	}
+}
+
+material cursor
+{
+	technique
+	{
+		pass
+        {
+            scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture cursor.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material background_grid
+{
+	technique
+	{
+		pass
+        {
+            lighting on
+            scene_blend alpha_blend
+            depth_check off
+            depth_write off
+
+			texture_unit
+			{
+				texture grid.png
+			}
+		}
+	}
+}

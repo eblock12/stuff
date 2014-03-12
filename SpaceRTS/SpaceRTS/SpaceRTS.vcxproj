@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="AsteroidField.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="DemoState.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameSceneObject.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="HeadsUpDisplay.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="OverheadCameraMan.h" />
+    <ClInclude Include="Planet.h" />
+    <ClInclude Include="SelectionListener.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="AsteroidField.cpp" />
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="DemoState.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameSceneObject.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HeadsUpDisplay.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OverheadCameraMan.cpp" />
+    <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\General\GreenSkin.jpg">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\General\planet_glow.png" />
+    <Image Include="Resources\General\spheremap.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\General\tusk.jpg">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\General\Debug.material" />
+    <None Include="Resources\General\Global.material" />
+    <None Include="Resources\General\Ogre.material">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </None>
+    <None Include="Resources\General\ogrehead.mesh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </None>
+    <None Include="Resources\General\planet.material" />
+    <None Include="Resources\General\rock1.material" />
+    <None Include="Resources\General\rock1.mesh" />
+    <None Include="Resources\General\Ships.material" />
+    <None Include="Resources\General\ship_scout.mesh" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8654F939-4577-468E-A695-A8EDB8FA4AF3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SpaceRTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OGRE_HOME)\Bin\$(Configuration)\OgreMain_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\OIS_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\RenderSystem_Direct3D9_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_OctreeSceneManager_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_ParticleFX_d.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OGRE_HOME)\Bin\$(Configuration)\OgreMain_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\OIS_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\RenderSystem_Direct3D9_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_OctreeSceneManager_d.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_ParticleFX_d.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableLanguageExtensions>
+      </DisableLanguageExtensions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OGRE_HOME)\Bin\$(Configuration)\OgreMain.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\OIS.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\RenderSystem_Direct3D9.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_OctreeSceneManager.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_ParticleFX.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm500 %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableLanguageExtensions>
+      </DisableLanguageExtensions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OGRE_HOME)\Bin\$(Configuration)\OgreMain.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\OIS.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\RenderSystem_Direct3D9.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_OctreeSceneManager.dll" "$(OutDir)"
+copy "$(OGRE_HOME)\Bin\$(Configuration)\Plugin_ParticleFX.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,13 @@
+material reticlereticle1
+{
+	technique
+	{
+		pass
+		{
+			diffuse 0.246667 0.8 1 1
+			specular 1 1 1 1 130.56
+		}
+
+	}
+
+}

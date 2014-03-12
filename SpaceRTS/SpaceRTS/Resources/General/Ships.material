@@ -1,0 +1,11 @@
+material ShipScout
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.833333 0.742857 0.644444
+			diffuse 0.833333 0.742857 0.644444
+		}
+	}
+}

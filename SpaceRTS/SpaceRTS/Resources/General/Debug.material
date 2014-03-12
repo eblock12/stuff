@@ -1,0 +1,13 @@
+material Debug/GridLine
+{
+	technique
+	{
+		pass
+		{
+            lighting on
+            depth_write off
+			ambient 1.0 1.0 1.0
+			diffuse 1.0 1.0 1.0 
+		}
+	}
+}
